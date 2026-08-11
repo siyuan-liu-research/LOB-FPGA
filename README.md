@@ -39,16 +39,3 @@ training configuration, without exposing the model implementation prior to publi
 ## License
 
 Released under CC BY 4.0 (see `LICENSE`). If you use these materials, please cite the paper.
-
-## Citation
-
-```bibtex
-@article{liu2026lobfpga,
-  title   = {Microsecond-Latency, Fully On-Chip Limit Order Book Prediction on an Edge FPGA:
-             A Lightweight INT8 1D-CNN Hardware--Software Co-Design},
-  author  = {Liu, Siyuan},
-  journal = {IEEE Access},
-  year    = {2026},
-  note    = {Under review}
-}
-```
