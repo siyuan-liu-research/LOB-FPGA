@@ -1,4 +1,4 @@
-# Random Seeds (Reviewer R1-6 item 6)
+# Random Seeds
 
 All stochastic steps are seeded for full reproducibility.
 
