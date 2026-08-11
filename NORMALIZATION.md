@@ -1,4 +1,4 @@
-# Normalization Statistics (Reviewer R1-6 item 5)
+# Normalization Statistics
 
 ## Source
 All experiments use the **FI-2010 `NoAuction_Zscore`** subset, i.e. the officially
