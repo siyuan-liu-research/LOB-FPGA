@@ -10,17 +10,17 @@ is evaluated exactly once per configuration (see the test-set access audit log i
 
 ## Main hyperparameter table
 
-| # | Model / experiment | Features | Optimizer | lr | wd | batch | epochs | patience | scheduler (T_max / η_min) | focal γ | dropout | seed |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | Proposed FP32 (deployed backbone) | 40/144 | Adam | 1e-3 | — | 512 | 100 | 10 | Cosine 100 / 1e-5 | 2.0 | 0.3 | 3407 |
-| 2 | Proposed QAT→INT8 (per-tensor input) | 40/144 | Adam | 1e-5 | — | 512 | 15 | none* | Cosine 15 / 1e-6 | 2.0 | 0.3 | 3407 |
-| 3 | **Deployed INT8** (per-channel input, weight-fold) | 144 | Adam | 1e-5 | — | 512 | 30 | none* | Cosine 30 / 1e-6 | 2.0 | 0.3 | 3407 |
-| 4 | PTQ baseline (calibrated on 5000 training-head samples) | 144 | — (no training) | — | — | 512 | — | — | — | 2.0† | — | 3407 |
-| 5 | Bit-width sweep 16/8/6/4-bit (simulation) | 144 | — (no training) | — | — | 512 | — | — | — | 2.0† | — | 3407 |
-| 6 | Structure / input / protocol ablation matrix | 40/144 | AdamW | 1e-3 | 1e-4 | 512 | 120 | 20 | Cosine 120 / 1e-5 | 2.0 | 0.3 | 3407 |
-| 7 | DeepLOB baseline (144-adapted) | 144 | Adam | 1e-3 | — | 512 | 100 | 10 | Cosine 100 / 1e-5 | 2.0 | arch-defined | 3407 |
-| 8 | TLOB baseline (dual-attention, 144-adapted) | 144 | Adam | 1e-4 | — | 512 | 100 | 10 | Cosine 100 / 1e-6 | 2.0 | 0.1 | 3407 |
-| 9 | MLP / LSTM baselines | 144 | Adam | 1e-3 | — | 512 | 100 | 10 | Cosine 100 / 1e-5 | 2.0 | 0.3 | 3407 |
+| # | Model / experiment | Features | Optimizer | lr | wd | batch | epochs | patience | scheduler (T_max / η_min) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Proposed FP32 (deployed backbone) | 40/144 | Adam | 1e-3 | — | 512 | 100 | 10 | Cosine 100 / 1e-5 |
+| 2 | Proposed QAT→INT8 (per-tensor input) | 40/144 | Adam | 1e-5 | — | 512 | 15 | none* | Cosine 15 / 1e-6 |
+| 3 | **Deployed INT8** (per-channel input, weight-fold) | 144 | Adam | 1e-5 | — | 512 | 30 | none* | Cosine 30 / 1e-6 |
+| 4 | PTQ baseline (calibrated on 5000 training-head samples) | 144 | — (no training) | — | — | 512 | — | — | — |
+| 5 | Bit-width sweep 16/8/6/4-bit (simulation) | 144 | — (no training) | — | — | 512 | — | — | — |
+| 6 | Structure / input / protocol ablation matrix | 40/144 | AdamW | 1e-3 | 1e-4 | 512 | 120 | 20 | Cosine 120 / 1e-5 |
+| 7 | DeepLOB baseline (144-adapted) | 144 | Adam | 1e-3 | — | 512 | 100 | 10 | Cosine 100 / 1e-5 |
+| 8 | TLOB baseline (dual-attention, 144-adapted) | 144 | Adam | 1e-4 | — | 512 | 100 | 10 | Cosine 100 / 1e-6 |
+| 9 | MLP / LSTM baselines | 144 | Adam | 1e-3 | — | 512 | 100 | 10 | Cosine 100 / 1e-5 |
 
 \* The two QAT runs use no early stopping: the per-tensor run keeps the best
 validation checkpoint each epoch; the deployed per-channel-input run selects the
