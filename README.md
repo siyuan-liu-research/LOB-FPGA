@@ -6,10 +6,6 @@ This repository currently hosts **preliminary verification materials** that supp
 results reported in the manuscript. The **full model-training code, HLS kernel source,
 and trained model weights will be released here upon acceptance** of the paper.
 
-The materials provided now are sufficient to inspect the experimental protocol
-(leakage control, data splits), the post-place-and-route hardware results, and the
-training configuration, without exposing the model implementation prior to publication.
-
 ## Contents (available now)
 
 | Path | Description |
