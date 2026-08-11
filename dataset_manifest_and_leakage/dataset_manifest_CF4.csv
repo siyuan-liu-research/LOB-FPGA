@@ -1,0 +1,4 @@
+﻿split,file,days,n_samples,tick_footprint_start,tick_footprint_end,cls0_Up,cls1_Flat,cls2_Down,note
+train,Train_Dst_NoAuction_ZScore_CF_4.txt,1-2-3-4,128574,0,129009,52450,25199,50925,"training pool, days [1, 2, 3, 4]; windows before the trailing purge/embargo buffer (110 ticks)"
+val,Train_Dst_NoAuction_ZScore_CF_4.txt,1-2-3-4,14238,129120,143466,5409,3785,5044,last 10% of the training pool in chronological order (split row=129120); used for model selection only
+test,Test_Dst_NoAuction_ZScore_CF_4.txt,5,34676,0,34784,14781,5211,14684,day 5 held out in a separate file; evaluated exactly once

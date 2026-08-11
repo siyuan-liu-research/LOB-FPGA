@@ -1,0 +1,81 @@
+{
+  "manuscript": "Access-2026-30102",
+  "protocol": "official anchored-fold (D1), leak-free, no cross-fold concatenation",
+  "generated_at": "2026-07-21 16:38:36",
+  "fold": 1,
+  "window_size": 10,
+  "horizon": 100,
+  "n_features": 40,
+  "purge_embargo_ticks": 110,
+  "val_ratio": 0.1,
+  "seed": 3407,
+  "day_boundaries_cumulative": [
+    {
+      "day": 1,
+      "row_start": 0,
+      "row_end": 39512
+    }
+  ],
+  "normalization": "Z-score, precomputed per FI-2010 construction; statistics use historical data only (causal). No test-set statistics used.",
+  "splits": [
+    {
+      "split": "train",
+      "file": "Train_Dst_NoAuction_ZScore_CF_1.txt",
+      "file_full": "FI-2010/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Training/Train_Dst_NoAuction_ZScore_CF_1.txt",
+      "days": [
+        1
+      ],
+      "n_samples": 35342,
+      "tick_footprint": [
+        0,
+        35450
+      ],
+      "class_dist": {
+        "0": 14247,
+        "1": 8118,
+        "2": 12977
+      },
+      "note": "training pool, days [1]; windows before the trailing purge/embargo buffer (110 ticks)"
+    },
+    {
+      "split": "val",
+      "file": "Train_Dst_NoAuction_ZScore_CF_1.txt",
+      "file_full": "FI-2010/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Training/Train_Dst_NoAuction_ZScore_CF_1.txt",
+      "days": [
+        1
+      ],
+      "n_samples": 3842,
+      "tick_footprint": [
+        35561,
+        39511
+      ],
+      "class_dist": {
+        "0": 1650,
+        "1": 707,
+        "2": 1485
+      },
+      "note": "last 10% of the training pool in chronological order (split row=35561); used for model selection only"
+    },
+    {
+      "split": "test",
+      "file": "Test_Dst_NoAuction_ZScore_CF_1.txt",
+      "file_full": "FI-2010/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Testing/Test_Dst_NoAuction_ZScore_CF_1.txt",
+      "days": [
+        2
+      ],
+      "n_samples": 38288,
+      "tick_footprint": [
+        0,
+        38396
+      ],
+      "class_dist": {
+        "0": 16161,
+        "1": 7031,
+        "2": 15096
+      },
+      "note": "day 2 held out in a separate file; evaluated exactly once"
+    }
+  ],
+  "n_windows_total_legal_in_train_pool": 39403,
+  "n_dropped_in_purge_embargo_buffer": 219
+}

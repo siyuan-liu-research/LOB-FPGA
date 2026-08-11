@@ -1,0 +1,4 @@
+2026-07-22 17:15:58 | script=train_deeplob.py | CF_9 feat144 DeepLOB | test_day=10 | test_file=Test_Dst_NoAuction_ZScore_CF_9.txt | n_test=31828 | seed=3407 | acc=0.8791 | macroF1=0.8789
+2026-07-26 14:30:38 | script=finalize_tlob_eval.py | CF_9 feat144 TLOB | test_day=10 | test_file=Test_Dst_NoAuction_ZScore_CF_9.txt | n_test=31828 | seed=3407 | acc=0.8398 | macroF1=0.8417 | note=finalize-from-ckpt(train evaluated once, crashed on weights_only)
+2026-07-27 15:19:21 | script=train_baseline.py | CF_9 feat144 MLP | test_day=10 | test_file=Test_Dst_NoAuction_ZScore_CF_9.txt | n_test=31828 | seed=3407 | acc=0.8217 | macroF1=0.8243
+2026-07-27 15:39:36 | script=train_baseline.py | CF_9 feat144 LSTM | test_day=10 | test_file=Test_Dst_NoAuction_ZScore_CF_9.txt | n_test=31828 | seed=3407 | acc=0.7984 | macroF1=0.7986

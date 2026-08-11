@@ -1,0 +1,13 @@
+================================================================
+Leakage self-check — CF_3 — 2026-07-21 16:39:06
+================================================================
+[A OK] Day-level disjoint: train_days=[1, 2, 3]  ∩  test_day={4} = ∅
+[B OK] File-level disjoint:
+        train_file = Train_Dst_NoAuction_ZScore_CF_3.txt
+        test_file  = Test_Dst_NoAuction_ZScore_CF_3.txt
+[C OK] train/val buffer: last train label end=95689 < val window start=95800, gap=111 ticks (> purge/embargo=110)
+[C2 OK] train/val window-end index sets are disjoint
+[D OK] Normalization causality: Z-score statistics come only from historical data (as constructed in FI-2010); no test-set statistics are used.
+----------------------------------------------------------------
+Conclusion: all assertions pass. CF_3 satisfies the anchored-fold leak-free protocol (R1-1 + R1-2).
+================================================================
