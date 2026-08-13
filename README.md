@@ -19,7 +19,7 @@ and trained model weights will be released here upon acceptance** of the paper.
 
 - Model-training and QAT pipeline (PyTorch)
 - HLS kernel source (`lob_kernel.cpp` / `.h`) for all variants
-- Trained model weights (FP32, QAT, and exported INT8 fixed-point parameters)
+- Trained model weights 
 - HLS testbenches and the on-board test driver
 
 ## License
