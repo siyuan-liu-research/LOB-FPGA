@@ -22,15 +22,6 @@ and trained model weights will be released here upon acceptance** of the paper.
 - Trained model weights (FP32, QAT, and exported INT8 fixed-point parameters)
 - HLS testbenches and the on-board test driver
 
-## Key facts
-
-- **Dataset:** FI-2010 (NoAuction, Z-score), 144-dimensional features, horizon k = 100.
-- **Protocol:** official anchored walk-forward, main fold CF_9 (train days 1–9, test day 10);
-  purge/embargo of T+k = 110 ticks at every split boundary; test set evaluated once.
-- **Model:** residual 1D-CNN, 86,211 parameters; FP32 Macro-F1 0.8509 → INT8 0.8331.
-- **Hardware:** KU040 at 100 MHz; fully-unrolled design at 57 µs, 2.288 W; board-level
-  execution bit-exact with the PyTorch INT8 reference on all 2,000 tested samples.
-
 ## License
 
 Released under CC BY 4.0 (see `LICENSE`). If you use these materials, please cite the paper.
