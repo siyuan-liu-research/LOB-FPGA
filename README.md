@@ -12,7 +12,6 @@ and trained model weights will be released here upon acceptance** of the paper.
 |------|-------------|
 | `dataset_manifest_and_leakage/` | Per-fold dataset manifests (file, days, tick range, sample count, class distribution) and automated leakage self-check logs for all nine anchored folds, plus the timestamped test-set access audit. |
 | `postroute_reports/` | Vivado post-place-and-route timing / utilization / power reports for the five feasible design variants on the Xilinx Kintex UltraScale KU040 (xcku040-ffva1156-2-e). |
-| `HYPERPARAMETERS.md` | Full training and quantization hyperparameters (Table III of the paper). |
 | `NORMALIZATION.md` | Z-score normalization specification (causal, prior-day statistics). |
 | `SEEDS.md` | Random seeds used throughout the study. |
 
