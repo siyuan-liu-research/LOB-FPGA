@@ -1,0 +1,116 @@
+{
+  "manuscript": "Access-2026-40459",
+  "protocol": "official anchored-fold (D1), leak-free, no cross-fold concatenation",
+  "generated_at": "2026-07-21 16:42:03",
+  "fold": 6,
+  "window_size": 10,
+  "horizon": 100,
+  "n_features": 144,
+  "purge_embargo_ticks": 110,
+  "val_ratio": 0.1,
+  "seed": 3407,
+  "day_boundaries_cumulative": [
+    {
+      "day": 1,
+      "row_start": 0,
+      "row_end": 39512
+    },
+    {
+      "day": 2,
+      "row_start": 39512,
+      "row_end": 77909
+    },
+    {
+      "day": 3,
+      "row_start": 77909,
+      "row_end": 106444
+    },
+    {
+      "day": 4,
+      "row_start": 106444,
+      "row_end": 143467
+    },
+    {
+      "day": 5,
+      "row_start": 143467,
+      "row_end": 178252
+    },
+    {
+      "day": 6,
+      "row_start": 178252,
+      "row_end": 217404
+    }
+  ],
+  "normalization": "Z-score, precomputed per FI-2010 construction; statistics use historical data only (causal). No test-set statistics used.",
+  "splits": [
+    {
+      "split": "train",
+      "file": "Train_Dst_NoAuction_ZScore_CF_6.txt",
+      "file_full": "FI-2010/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Training/Train_Dst_NoAuction_ZScore_CF_6.txt",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "n_samples": 194900,
+      "tick_footprint": [
+        0,
+        195553
+      ],
+      "class_dist": {
+        "0": 80171,
+        "1": 36251,
+        "2": 78478
+      },
+      "note": "training pool, days [1, 2, 3, 4, 5, 6]; windows before the trailing purge/embargo buffer (110 ticks)"
+    },
+    {
+      "split": "val",
+      "file": "Train_Dst_NoAuction_ZScore_CF_6.txt",
+      "file_full": "FI-2010/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Training/Train_Dst_NoAuction_ZScore_CF_6.txt",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "n_samples": 21631,
+      "tick_footprint": [
+        195664,
+        217403
+      ],
+      "class_dist": {
+        "0": 7450,
+        "1": 6517,
+        "2": 7664
+      },
+      "note": "last 10% of the training pool in chronological order (split row=195664); used for model selection only"
+    },
+    {
+      "split": "test",
+      "file": "Test_Dst_NoAuction_ZScore_CF_6.txt",
+      "file_full": "FI-2010/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Testing/Test_Dst_NoAuction_ZScore_CF_6.txt",
+      "days": [
+        7
+      ],
+      "n_samples": 37237,
+      "tick_footprint": [
+        0,
+        37345
+      ],
+      "class_dist": {
+        "0": 15534,
+        "1": 6417,
+        "2": 15286
+      },
+      "note": "day 7 held out in a separate file; evaluated exactly once"
+    }
+  ],
+  "n_windows_total_legal_in_train_pool": 216750,
+  "n_dropped_in_purge_embargo_buffer": 219
+}
