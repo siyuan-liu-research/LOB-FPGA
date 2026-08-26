@@ -23,7 +23,7 @@ normalized files directly and does not recompute or store its own `mu/sigma`.
 
 The exact files, day ranges, per-split sample counts and class distributions
 consumed for every fold are documented in
-`../4_dataset_manifest_and_leakage/dataset_manifest_CF*.{csv,json}`.
+`dataset_manifest_and_leakage/dataset_manifest_CF*.{csv,json}`.
 
 ## To reproduce on a new instrument/venue
 Recompute `mu_j, sigma_j` from a causal (prior-day) window on the target feed
