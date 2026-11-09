@@ -1,7 +1,11 @@
 # Microsecond-Latency, Fully On-Chip Limit Order Book Prediction on an Edge FPGA: A Lightweight INT8 1D-CNN Hardware–Software Co-Design
 ## Status
 
-The manuscript has now been accepted. The paper PDF is available in this repo. Full experimental artifacts will be released as soon as possible.
+The manuscript has been accepted and published online. The paper PDF is available in this repo. Full experimental artifacts will be released as soon as possible.
+
+## Citation
+S. Liu, "Microsecond-Latency, Fully On-Chip Limit Order Book Prediction on an Edge FPGA: A Lightweight INT8 1D-CNN Hardware–Software Co-Design," in IEEE Access, vol. 14, pp. 141192-141215, 2026, doi: 10.1109/ACCESS.2026.3732942.
+
 
 ## Contents (available now)
 
@@ -13,7 +17,7 @@ The manuscript has now been accepted. The paper PDF is available in this repo. F
 | `SEEDS.md` | Random seeds used throughout the study. |
 |`paper.pdf`|	Published manuscript PDF.|
 
-## To be released upon acceptance
+## Artifacts pending release
 
 - Model-training and QAT pipeline (PyTorch)
 - HLS kernel source (`lob_kernel.cpp` / `.h`) for all variants
