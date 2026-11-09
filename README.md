@@ -2,9 +2,7 @@
 
 ## Status
 
-This repository currently hosts **preliminary verification materials** that support the
-results reported in the manuscript. The **full model-training code, HLS kernel source,
-and trained model weights will be released here upon acceptance** of the paper.
+The manuscript has now been accepted. The paper PDF is available in this repo. Full experimental artifacts will be released as soon as possible.
 
 ## Contents (available now)
 
@@ -14,6 +12,7 @@ and trained model weights will be released here upon acceptance** of the paper.
 | `postroute_reports/` | Vivado post-place-and-route timing / utilization / power reports for the five feasible design variants on the Xilinx Kintex UltraScale KU040 (xcku040-ffva1156-2-e). |
 | `NORMALIZATION.md` | Z-score normalization specification (causal, prior-day statistics). |
 | `SEEDS.md` | Random seeds used throughout the study. |
+|`paper.pdf`|	Published manuscript PDF.|
 
 ## To be released upon acceptance
 
