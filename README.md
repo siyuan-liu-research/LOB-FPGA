@@ -1,5 +1,4 @@
-# LOB-FPGA: Microsecond-Latency On-Chip Limit Order Book Prediction on an Edge FPGA
-
+# Microsecond-Latency, Fully On-Chip Limit Order Book Prediction on an Edge FPGA: A Lightweight INT8 1D-CNN Hardware–Software Co-Design
 ## Status
 
 The manuscript has now been accepted. The paper PDF is available in this repo. Full experimental artifacts will be released as soon as possible.
